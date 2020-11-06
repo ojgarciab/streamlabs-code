@@ -20,8 +20,9 @@ body {
 }
 
 #log>div {
-    animation: flipInY 500ms ease, fadeOut 1s ease 99999999s forwards;
-    -webkit-animation: flipInY 500ms ease, fadeOut 1s ease 99999999s forwards;
+    /* Antes de "forwards" indicamos los segundos que deseamos que se mantengan los mensajes */
+    animation: flipInY 500ms ease, fadeOut 1s ease 120s forwards;
+    -webkit-animation: flipInY 500ms ease, fadeOut 1s ease 120s forwards;
 }
 
 .colon {
