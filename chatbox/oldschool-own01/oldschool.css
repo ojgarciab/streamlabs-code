@@ -11,12 +11,12 @@ html, body {
 
 body {
     text-shadow: 0 0 1px #000, 0 0 2px #000;
-    background: #000000;
+    background: {background_color};
     font-family: 'Press Start 2P';
     font-weight: 700;
-    font-size: 15px;
+    font-size: {font_size};
     line-height: 1.5em;
-    color: #FAFAFA;
+    color: {text_color};
 }
 
 #log>div {
