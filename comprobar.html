@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Meta tags requeridos -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Comprobar funcionamiento</title>
+    <script>
+        let url = new URL(window.location);
+        const datos = JSON.parse(url.searchParams.get("datos") ?? "{}");
+        console.log(datos);
+        if (datos.js !== undefined) {
+          let script = document.createElement("script");
+          let scriptUrl = new URL(datos.js, window.location);
+          script.src = scriptUrl;
+          document.head.appendChild(script);
+        }
+    </script>
+  </head>
+  <body style="padding-top: 2rem;">
+    <div>
+      <h1>Plantilla lista para funcionar</h1>
+      <p class="lead">Por favor, envíe eventos.</p>
+  </body>
+</html>
