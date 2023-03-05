@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <!-- Meta tags requeridos -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Selección de plantilla</title>
+    <script src="plantillas.js"></script>
+  </head>
+  <body style="padding-top: 2rem;">
+    <div>
+      <h1>Selección de plantilla</h1>
+      <p>Por favor, seleccione una de las plantillas.</p>
+      <select id="listado">
+        <option value="">-- Selecione --</option>
+      </select>
+      <button id="enviar">Abrir</button>
+    </div>
+    <script>
+        plantillas.forEach(elemento => {
+            let option = document.createElement("option");
+            option.value = JSON.stringify(elemento);
+            option.innerText = elemento.nombre;
+            listado.appendChild(option);
+        });
+        enviar.addEventListener("click", () => {
+            let url = new URL("comprobar.html", window.location);
+            url.searchParams.append("datos", listado.value);
+            window.open(url, "comprobar");
+        });
+    </script>
+  </body>
+</html>
