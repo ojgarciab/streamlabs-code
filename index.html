@@ -28,7 +28,8 @@
             let url = new URL("comprobar.html", window.location);
             url.searchParams.append("datos", listado.value);
             /* Agregamos los parámetros adicionales */
-            JSON.parse(listado.value).queryParams.forEach(parámetro => {
+            console.log(JSON.parse(listado.value));
+            JSON.parse(listado.value).searchParams.forEach(parámetro => {
                 url.searchParams.append(parámetro.clave, parámetro.valor);
             });
             window.open(url, "comprobar");
