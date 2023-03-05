@@ -19,25 +19,7 @@
   </head>
   <body style="padding-top: 2rem;">
     <div>
-      <h1>Selección de plantilla</h1>
-      <p class="lead">Por favor, seleccione una de las plantillas.</p>
-      <select id="listado">
-        <option value="">-- Selecione --</option>
-      </select>
-      <button id="enviar">Abrir</button>
-    </div>
-    <script>
-        plantillas.forEach(elemento => {
-            let option = document.createElement("option");
-            option.value = JSON.stringify(elemento);
-            option.innerText = elemento.nombre;
-            listado.appendChild(option);
-        });
-        enviar.addEventListener("click", () => {
-            let url = new URL("comprobar.html", window.location);
-            url.searchParams.append("datos", listado.value);
-            window.open(url, "comprobar");
-        });
-    </script>
+      <h1>Plantilla lista para funcionar</h1>
+      <p class="lead">Por favor, envíe eventos.</p>
   </body>
 </html>
