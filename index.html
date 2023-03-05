@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Selección de plantilla</title>
     <script src="plantillas.js"></script>
+    <script src="plantillas.extra.js"></script>
   </head>
   <body style="padding-top: 2rem;">
     <div>
@@ -26,6 +27,10 @@
         enviar.addEventListener("click", () => {
             let url = new URL("comprobar.html", window.location);
             url.searchParams.append("datos", listado.value);
+            /* Agregamos los parámetros adicionales */
+            JSON.parse(listado.value).queryParams.forEach(parámetro => {
+                url.searchParams.append(parámetro.clave, parámetro.valor);
+            });
             window.open(url, "comprobar");
         });
     </script>

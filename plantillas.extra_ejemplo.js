@@ -3,7 +3,7 @@
 plantillas.forEach(elemento => {
     switch(elemento.nombre) {
         case "Oldschool own02 (google)":
-            elemento.queryParams.forEach(parámetros => {
+            elemento.searchParams.forEach(parámetros => {
                 switch (parámetros.clave) {
                     case "key":
                         parámetros.valor = "(configurar)";

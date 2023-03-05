@@ -5,14 +5,14 @@ const plantillas = [
         css: "chatbox/oldschool-own01/oldschool.css",
         js: "chatbox/oldschool-own01/oldschool.js",
         html: "chatbox/oldschool-own01/oldschool.html",
-        queryParams: [],
+        searchParams: [],
     },
     {
         nombre: "Oldschool own02 (interna)",
         css: "chatbox/oldschool-own01/oldschool.css",
         js: "chatbox/oldschool-own02/oldschool.js",
         html: "chatbox/oldschool-own01/oldschool.html",
-        queryParams: [
+        searchParams: [
             { clave: "voz", valor: "interna" },
         ],
     },
@@ -21,7 +21,7 @@ const plantillas = [
         css: "chatbox/oldschool-own01/oldschool.css",
         js: "chatbox/oldschool-own02/oldschool.js",
         html: "chatbox/oldschool-own01/oldschool.html",
-        queryParams: [
+        searchParams: [
             { clave: "voz", valor: "google" },
             { clave: "key", valor: "(configurar)" },
         ],
