@@ -25,6 +25,8 @@
             listado.appendChild(option);
         });
         enviar.addEventListener("click", () => {
+            if (listado.value == "") return;
+            localStorage.setItem(window.location + ".selección", listado.value);
             let url = new URL("comprobar.html", window.location);
             url.searchParams.append("datos", listado.value);
             /* Agregamos los parámetros adicionales */
@@ -34,6 +36,7 @@
             });
             window.open(url, "comprobar");
         });
+        listado.value = localStorage.getItem(window.location + ".selección") ?? "";
     </script>
   </body>
 </html>
